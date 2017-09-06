@@ -6,29 +6,12 @@
 
 // })(Something || {});
 
-var SolarSystem = (function(oldSolarSystem){
-	const planets = ["mercury", "venus", "earth", "mars", "jupiter", "saturn", "uranus", "neptune"];
-	const spaceCraft = ["Sputnik", "Apollo", "Talos I", "Ur mom", "Gemini"];
-	oldSolarSystem.getPlanets = function() {
-		return planets;
-	};
-
-	oldSolarSystem.setPlanet = function(newPlanet) {
-		planets.push(newPlanet);
-	}
-
-	oldSolarSystem.getSpaceCraft = function() {
-		return spaceCraft;
-	}
-
-	oldSolarSystem.setSpaceCraft = function(newCraft) {
-		spaceCraft.push(newCraft)
-	}
-
-	return oldSolarSystem;
-})(SolarSystem || {});
+SolarSystem.setPlanet("Planet X");
 
 let myPlanets = SolarSystem.getPlanets();
 let mySpaceCraft = SolarSystem.getSpaceCraft();
+let myStars = SolarSystem.getStars();
 
 console.log("planets", myPlanets);
+console.log("space stuff", mySpaceCraft);
+console.log("stars", myStars);
